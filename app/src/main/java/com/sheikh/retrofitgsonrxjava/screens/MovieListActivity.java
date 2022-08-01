@@ -1,7 +1,6 @@
-package com.sheikh.retrofitgsonrxjava;
+package com.sheikh.retrofitgsonrxjava.screens;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProviders;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -10,11 +9,8 @@ import android.os.Bundle;
 import android.util.DisplayMetrics;
 import android.widget.Toast;
 
+import com.sheikh.retrofitgsonrxjava.R;
 import com.sheikh.retrofitgsonrxjava.adapters.MoviesAdapter;
-import com.sheikh.retrofitgsonrxjava.pojos.Movie;
-import com.sheikh.retrofitgsonrxjava.screens.employees.MoviesViewModel;
-
-import java.util.List;
 
 public class MovieListActivity extends AppCompatActivity {
 

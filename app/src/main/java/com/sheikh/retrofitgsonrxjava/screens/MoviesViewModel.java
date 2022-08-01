@@ -1,4 +1,4 @@
-package com.sheikh.retrofitgsonrxjava.screens.employees;
+package com.sheikh.retrofitgsonrxjava.screens;
 
 import android.app.Application;
 import android.os.AsyncTask;

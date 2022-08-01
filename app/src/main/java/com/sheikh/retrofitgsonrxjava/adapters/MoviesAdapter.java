@@ -19,6 +19,8 @@ import java.util.List;
 
 public class MoviesAdapter extends RecyclerView.Adapter<MoviesAdapter.MoviesViewHolder> {
 
+    public static final String BASE_IMAGE_URL = "https://image.tmdb.org/t/p/";
+    public static final String SMALL_IMAGE_SIZE = "w185";
     private List<Movie> movieList;
     private ReachEnd reachEnd;
 
@@ -59,7 +61,7 @@ public class MoviesAdapter extends RecyclerView.Adapter<MoviesAdapter.MoviesView
     public void onBindViewHolder(@NonNull MoviesViewHolder holder, int position) {
         Movie currentMovie = movieList.get(position);
         holder.tv_movieName.setText(currentMovie.getTitle());
-        Picasso.get().load("https://image.tmdb.org/t/p/" + "w780/" + currentMovie.getPosterPath()).placeholder(R.drawable.hacker).into(holder.imgv_movie_img);
+        Picasso.get().load(BASE_IMAGE_URL + SMALL_IMAGE_SIZE + currentMovie.getPosterPath()).placeholder(R.drawable.hacker).into(holder.imgv_movie_img);
         Log.e("path",currentMovie.getPosterPath());
         if (position == movieList.size() - 4 && movieList.size() > 20) {
             reachEnd.onReachEnd();
